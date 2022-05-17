@@ -1,16 +1,16 @@
-const express = require("express");
+// const express = require("express");
 const mysql = require("mysql2");
 const cTable = require("console.table");
 
-const PORT = process.env.PORT || 3001;
-const app = express();
+// const PORT = process.env.PORT || 3001;
+// const app = express();
 
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: false }));
+// app.use(express.json());
 
 const connection = require("./db/database");
 const { getDepartments, getEmployees, getRoles } = require("./db/query.js");
-const { listen } = require("express/lib/application");
+// const { listen } = require("express/lib/application");
 
 function startingQuestion() {
   inquirer
@@ -65,4 +65,16 @@ function startingQuestion() {
           break;
       }
     });
+}
+
+function viewAllEmployees() {
+  const query = connection.query(
+    "SELECT e1.id, e1.first_name, e1.last_name, roles.title as role, departments.name AS department, roles.salary, Concat(e2.first_name, ' ', e2.last_name) AS manager FROM employees e1 LEFT JOIN roles ON e1.role_id = roles.id LEFT JOIN departments ON roles.department_id = departments.id LEFT JOIN employees e2 ON e2.id = e1.manager_id",
+    function (err, res) {
+      if (err) throw err;
+      console.log("\n All Employees \n");
+      console.table(res);
+      questionsOpening();
+    }
+  );
 }
