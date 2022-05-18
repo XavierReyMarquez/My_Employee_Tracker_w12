@@ -23,6 +23,10 @@ An application that will help the user create a view database to keep track of t
 
   To launch the application the user must type node server.js after the user will be prompted with a list asking the user what they would like to do from there the user can view roles, Employees, and Departments as well as add and update roles, departments, and Employess
 
+  ![A Screenshot of application running](./assets/screenshots/Screenshot.png "A video of the database application in use")
+
+  Link to the video in google drive: https://drive.google.com/drive/folders/1ilundIV0M8VLIxIOqHwYqxw3i6NJOebl?usp=sharing
+
   ## Credits
 
   Xavier Marquez
