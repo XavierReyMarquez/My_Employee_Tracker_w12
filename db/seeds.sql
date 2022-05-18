@@ -21,17 +21,17 @@ VALUES
 
 INSERT INTO employees (first_name, last_name, role_id, manager_id)
 VALUES
-('Xavier', 'Marquez', 4, NULL),
+('Xavier', 'Marquez', 3, NULL),
 ('Mary', 'Rose', 1, 1),
-('Jerry', 'Summer', 2, 1),
-('Rick', 'Shanchaz', 3, 1),
+('Jerry', 'Summer', 2, NULL),
+('Rick', 'Shanchaz', 3, 2),
 ('Morty', 'Shanchaz', 4, NULL),
 ('Pencil', 'Selvester', 4, NULL),
-('Dan', 'Gray', 5, 6),
+('Dan', 'Gray', 5, 4),
 ('Ben', 'DaBest', 6, NULL),
-('Carlos', 'Rios', 7, 8),
-('James', 'Dean', 8, 8),
+('Carlos', 'Rios', 6, NULL),
+('James', 'Dean', 7, 3),
 ('Sarah', 'Mia', 8, NULL),
-('Albert', 'Einstien', 4, NULL),
-('Ricky', 'Small', 4, NULL),
-('Gray', 'Fullburst', 5, 6);
+('Albert', 'Einstien', 8, NULL),
+('Ricky', 'Small', 2, NULL),
+('Gray', 'Fullburst', 5, NULL);
